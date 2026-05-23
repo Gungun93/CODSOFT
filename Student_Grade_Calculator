@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Student_Grade_Calculator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter marks for English: ");
+        int sub1 = sc.nextInt();
+
+        System.out.print("Enter marks for Maths: ");
+        int sub2 = sc.nextInt();
+
+        System.out.print("Enter marks for Physics: ");
+        int sub3 = sc.nextInt();
+
+        System.out.print("Enter marks for chemistry: ");
+        int sub4 = sc.nextInt();
+
+        System.out.print("Enter marks for IT: ");
+        int sub5 = sc.nextInt();
+
+        int total = sub1 + sub2 + sub3 + sub4 + sub5;
+
+        double average = total / 5.0;
+
+        String grade;
+
+        if (average >= 90) {
+            grade = "A+";
+        }
+        else if (average >= 80) {
+            grade = "A";
+        }
+        else if (average >= 70) {
+            grade = "B";
+        }
+        else if (average >= 60) {
+            grade = "C";
+        }
+        else if (average >= 50) {
+            grade = "D";
+        }
+        else {
+            grade = "F";
+        }
+
+        System.out.println("\n===== RESULT =====");
+        System.out.println("Total Marks = " + total);
+        System.out.println("Average Percentage = " + average + "%");
+        System.out.println("Grade = " + grade);
+
+        sc.close();
+    }
+}
